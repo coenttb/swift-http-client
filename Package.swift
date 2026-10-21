@@ -15,7 +15,7 @@ let package = Package(
         .library(
             name: "HTTP Client",
             targets: ["HTTP Client"]
-        ),
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/swift-atoms/swift-byte.git", branch: "main"),

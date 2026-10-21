@@ -1,19 +1,19 @@
 public import Byte
-import Coder
 import Client
 import Client_Macro
+import Coder
 import Either
 import HTTP
 import HTTP_Client
 import HTTP_Reply
 import HTTP_Router
+import Interface_Macro
 import Operation
 import Optic
 import Parser
 import RFC_3986
 import RFC_9110
 import Serializer
-import Interface_Macro
 public import Tagged
 
 func bytes(_ text: String) -> [Byte] {
@@ -42,7 +42,8 @@ enum Refusal: Swift.Error, Equatable {
     struct Coder: Coding {
         var body: some Coding<ArraySlice<Byte>, Refusal, [Byte], Swift.String.Coder.Error> {
             return Swift.String.Coder().map(
-                to: { _ in Refusal.refused }, from: { _ in "refused" }
+                to: { _ in Refusal.refused },
+                from: { _ in "refused" }
             )
         }
     }

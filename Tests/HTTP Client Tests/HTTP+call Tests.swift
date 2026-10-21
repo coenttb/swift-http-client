@@ -5,10 +5,10 @@ import HTTP
 import HTTP_Client
 import HTTP_Reply
 import HTTP_Router
-import Tagged
 import Operation
 import RFC_9110
 import Serializer
+import Tagged
 import Testing
 
 private func responder() -> HTTP.Client<HTTP.Router.Error> {
